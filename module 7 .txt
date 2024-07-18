@@ -1,0 +1,32 @@
+MODULE – 7(Laravel)
+• Create Following Routes.(for frontend side application)
+a) Home page
+b) About us
+c) Contact us
+d) Gallery
+e) Registration
+f) Login
+
+Route::get('/',[HomeController::class,'index']);
+Route::get('/about',[AboutController::class,'index']);
+Route::get('/contact',[ContactController::class,'index']);
+Route::get('/gallery',[GalleryController::class,'index']);
+Route::get('/registration',[RegisterController::class,'index']);
+Route::get('/login',[LoginController::class,'index']);
+
+2)How to pass Multiple Variable in route?
+Route::get('{x}/{y}', function($x, $y) { $data = compact('x', 'y'); return View::make('index', $data); });
+
+3)How to pass variable which can be null in Route?
+
+4)Create custom auto using middleware
+
+5)Generate Resource Controller for employee
+php artisan make:controller EmployeeController --resource
+
+6)In Employee Controller?s action Call Middleware.
+
+7)How to remove route caching?
+php artisan route:clear
+
+8)Create Custom Macro For search User
